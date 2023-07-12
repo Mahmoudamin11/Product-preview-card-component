@@ -1,0 +1,180 @@
+/* Start variables */
+:root {
+    --cream: hsl(30, 38%, 92%);
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* End variables */
+
+
+/* Start my framework */
+/* End my framework */
+
+/* Start global */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--cream);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@media (min-width: 769px) {
+    .page .mob-img {
+        display: none;
+    }
+}
+
+.page {
+    width: 640px;
+    height: 478px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: var(--White);
+}
+
+.page .image img {
+    height: 478px;
+}
+
+.page .content {
+    padding: 30px;
+}
+
+.content .upper-one {
+    color: var(--Dark-grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.content h1 {
+    width: 200px;
+    font-family: 'Fraunces', serif;
+    margin-bottom: 30px;
+}
+
+.content .mid-one {
+    color: var(--Dark-grayish-blue);
+    line-height: 1.8;
+    width: 220px;
+    margin-bottom: 30px;
+}
+
+.content .pricing .new-price {
+    color: var(--Dark-cyan);
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Fraunces', serif;
+    position: relative;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.content .pricing .new-price::before {
+    content: '$169.99';
+    position: absolute;
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    left: 55%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+
+
+button {
+    padding: 20px;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--Dark-cyan);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+
+
+button img {
+    position: absolute;
+    margin-left: -65px;
+}
+
+button:hover {
+    background-color: var(--Very-dark-blue);
+}
+
+@media (max-width: 768px) {
+
+    body {
+        height: 100%;
+    }
+
+    .page {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 100%;
+    }
+
+    .page .image {
+        height: 360px;
+    }
+
+    .page .content {
+        padding: 20px;
+    }
+
+    .dsk-img {
+        display: none;
+    }
+
+    .mob-img {
+        display: block;
+        width: 350px;
+        max-height: 100%;
+    }
+
+    .page h1 {
+        width: 250px;
+        margin-bottom: 13px;
+    }
+
+    .page .mid-one {
+        width: 290px;
+        margin-bottom: 13px;
+    }
+
+    .content .pricing .new-price::before {
+        left: 48%;
+    }
+}
+
+/* End global */
